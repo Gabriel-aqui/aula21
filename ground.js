@@ -20,7 +20,6 @@ class Ground
     fill("#44475a");
     rect(pos.x, pos.y, this.w, this.h);
     pop();
-    Ground.display()
   }
  
 }

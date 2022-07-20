@@ -19,8 +19,8 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	ground = new Ground(200,390,400,20);
-    left = new Ground(300, 350, 20, 20)
-    right = new Ground(350, 350, 20, 20)
+    left = new Ground(210, 350, 20, 150)
+    right = new Ground(350, 350, 20, 150)
 
 	//Create the Bodies Here.
 	var ball_options = {
@@ -45,15 +45,12 @@ function draw () {
 	ground.show();
 	left.show()
 	right.show()
-	Ground.display();
-	leftSide.display()
-	rightSide.display()
 	drawSprites();
 	Engine.update(engine);
 }
 
 function keyPressed () {
-	if (keyDown === SPACE) {
-		Matter.Body.applyForce(ball, {x:0,y:0}, {x:0.03,y:-0.03})
+	if (keyCode === 32) {
+		Matter.Body.applyForce(ball, {x:0,y:0}, {x:30,y:-50})
 	}
 }
